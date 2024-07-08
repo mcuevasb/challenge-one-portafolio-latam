@@ -9,14 +9,17 @@ coloque nas sessões indicadas*/
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
    --cor-de-fundo: #F5F5F5;
    --cor-de-link: #000;
+   --color-de-body: #E5E5E5;
+   --color-de-about: #EAF2FD;  
+   --color-de-boton: #2A7AE4;
 }
 
 body {
     box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
+    background-color: var(--color-de-body) ;
     font-family: 'Raleway';
     margin: 0;
-    padding: 0;
+    padding: 20px;
     line-height: 1;
 }
 ol, ul,li {
@@ -25,6 +28,11 @@ ol, ul,li {
 a{
     text-decoration: none;
     color: var(--cor-de-link);
+}
+
+h3{
+    display: flex;
+    justify-content: center;
 }
 
 /*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
@@ -42,19 +50,66 @@ https://en.bem.info/methodology/quick-start/*/
 /*Sección Menu*/
 
 section.menu{
-
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
 }
+
+header.menu__header{
+    display: flex;
+    
+}
+
+img.title__profile{
+    overflow: hidden;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+li.menu__list__item{
+    display: inline-block;
+    padding: 10px;
+}
+
 
 /*Sección Title*/
 
 section.title{
-
+    background-color: var(--cor-de-fundo);
+    padding-top : 20px;
+    padding-bottom: 20px;
 }
+
+div.title__div{
+    display: flex;
+}
+
 
 /*Sección About*/
 
 section.about{
+    background-color: var(--color-de-about); 
+    padding: 20px;
+}
 
+/*Sección Skills*/
+
+.skills__line, .hobbies__line{
+    display: flex;
+    flex-flow:wrap;
+    justify-content:center;
+    
+}
+
+.skills__box, .hobbies__box{
+    display: flex;
+    justify-content: left;
+    
+    background-color:white;
+    max-width: 100%;
+    min-width: 10%;
+    height: 150px;
+    margin: 1rem 
 }
 
 /*Sección Hobbies*/
@@ -66,9 +121,22 @@ section.hobbies{
 /* Experiencia Académica*/
 
 section.academic{
-
+    background-color: var(--color-de-about);
+    padding: 10px;
+}
+.academic__courses{
+    display: flex;
+    flex-flow:wrap;
+    justify-content: space-evenly;
 }
 
+ .academic__courses__box{
+    display: inline-block;
+    background-color:white;
+    max-width: 100%;
+    min-width: 30%;
+    margin: 1rem 1rem 1rem
+}
 /* experiencia*/
 
 section.experience{
@@ -77,14 +145,59 @@ section.experience{
 
 /*Contacto*/
 
-section.formcontato{
-
+.formcontato__subtext
+{
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
 }
+
+section.formcontacto{
+    background-color: #EAF2FD;
+    padding: 20px;
+}
+
+.formcontato__contacto
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.formcontato__form{
+    display: flex;
+    flex-flow: column;
+    padding: 10px;
+}
+
+.formcontato__input, .formcontato__textarea{
+    margin: 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;  
+    border:none;
+    padding: 10px 10px;
+    font-size: 12px;
+}
+
+.formcontato__botao{
+    margin: 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    width: 30%;  
+    border:none;
+    padding: 10px 10px;
+    background-color: var(--color-de-boton);
+    color: white;
+    
+    font-size: 12px;
+}
+
 
 /*footeer*/
 
 section.footer{
-   
+   padding: 10px;
+    background-color: white;
+   text-align: center
+   ;
 }
 
 /* Vamos a desafiarnos trabajando con responsividad?
@@ -112,6 +225,7 @@ Utiliza las referencias de los breakpoints @media abajo */
 @media (min-width: 425px) {
 
 /*Menu*/
+
 
 /*Titulo*/
 
