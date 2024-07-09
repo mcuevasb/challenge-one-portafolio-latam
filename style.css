@@ -30,10 +30,11 @@ a{
     color: var(--cor-de-link);
 }
 
-h3{
-    display: flex;
-    justify-content: center;
+section{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
+
 
 /*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
 
@@ -50,20 +51,19 @@ https://en.bem.info/methodology/quick-start/*/
 /*Sección Menu*/
 
 section.menu{
-    padding: 40px 0;
     display: flex;
     justify-content: space-between;
 }
 
-header.menu__header{
+.menu__header{
     display: flex;
     
 }
 
-img.title__profile{
-    overflow: hidden;
+.title__profile{
+    overflow:hidden;
     border-radius: 50%;
-    padding: 15px;
+    
 }
 
 li.menu__list__item{
@@ -75,13 +75,14 @@ li.menu__list__item{
 /*Sección Title*/
 
 section.title{
-    background-color: var(--cor-de-fundo);
-    padding-top : 20px;
-    padding-bottom: 20px;
+    background-color: var(--cor-de-fundo);    
 }
 
-div.title__div{
+.title__div{
     display: flex;
+    flex-direction:row-reverse;
+    justify-content: space-between;
+    padding: 20px;
 }
 
 
@@ -96,21 +97,31 @@ section.about{
 
 .skills__line, .hobbies__line{
     display: flex;
-    flex-flow:wrap;
+    flex-flow: wrap;
     justify-content:center;
     
 }
 
 .skills__box, .hobbies__box{
-    display: flex;
-    justify-content: left;
-    
     background-color:white;
     max-width: 100%;
     min-width: 10%;
     height: 150px;
-    margin: 1rem 
+    margin: 10px;    
 }
+
+.skills__box li{
+   display:flex;
+   justify-content: center;
+   padding: 5px;
+}
+
+.hobbies__box li{
+    display:flex;
+    justify-content: center;
+    padding: 5px;
+ }
+
 
 /*Sección Hobbies*/
 
